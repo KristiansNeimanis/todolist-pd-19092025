@@ -11,10 +11,10 @@ function App() {
 
       <div className="card">
         <input type="text" id='task' placeholder='Task name here'/>
-        <button onClick={() => setTask(() => document.getElementById("tasks").append(document.createElement("li").value = document.getElementById("task").value, console.log(document.getElementById("task"))))}>Add</button>
+        <button onClick={() => setTask((task) => task = document.createElement("li").value = document.getElementById("task").value, document.getElementById("tasks").append(task))}>Add</button>
       </div>
 
-      <div id='tasks'></div>
+      <ul id='tasks'></ul>
     </>
   )
 }
